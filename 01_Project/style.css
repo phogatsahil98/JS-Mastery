@@ -1,0 +1,41 @@
+/* Container for spacing */
+.button-container {
+    display: flex; /* Enables flex properties */
+    gap: 1.5vw;    /* Responsive gap between buttons */
+    /* Add any other alignment/positioning for the group here */
+    align-items: center; 
+    justify-content: center; /* Optional: centers the buttons horizontally */
+    margin-top: 20px;
+}
+
+.button{
+    /* Removed conflicting 'display' properties */
+    block-size: 8vw; /* vertical size */
+    font-size: 3vw;
+    /* Removed align-items as it's not applicable here */
+    border-radius: 10px; /* Added for better look */
+    cursor: pointer;
+    min-width: 120px; /* Ensures text fits */
+}
+
+#color1{
+    background-color: #4eb663;
+    border: 2px solid #212121; /* Changed 2rem to 2px solid border */
+}
+#color2{
+    background-color: #baddbc;
+    border: 2px solid #212121;
+}
+#color3{
+    background-color: #24273d;
+    border: 2px solid #212121;
+    color: azure;
+}
+#color4{
+    background-color: #ee4459;
+    border: 2px solid #212121;
+}
+
+body {
+    transition: background-color 0.4s ease; /* Smooth transition for color change */
+}
