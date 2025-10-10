@@ -1,0 +1,102 @@
+.body {
+    /* Sets a dark background color for the entire page */
+    background-color: #212121;
+    /* Ensures minimum height of the body is the viewport height */
+    min-height: 100vh;
+    /* Centers content vertically (useful if body is a flex container) */
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Add some overall padding */
+}
+
+h1 {
+    /* Center the heading text */
+    text-align: center;
+    /* Font size scales with the viewport width for responsiveness */
+    font-size: 6vw;
+    margin-bottom: 40px; /* Add space below the heading */
+    
+    background: linear-gradient(90deg, #82f369 0%, #91cfff 50%, #ffaacc 100%);
+    
+    color: transparent; 
+    
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-class {
+    /* Center the text/content *inside* the form */
+    text-align: center;
+    /* Font size scales with viewport width */
+    font-size: 4vw;
+    color: azure;
+    /* Sets the maximum width for the form on large screens */
+    min-width: fit-content;
+    width: 90%; /* Ensures it's responsive on smaller screens */
+    padding: 20px;
+    background-color: #333; /* Slightly lighter background for the form container */
+    border-radius: 10px;
+
+}
+
+.form-div {
+    /* Adds vertical space between the form divisions (Height and Weight) */
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    
+    /* Use flexbox to align the label and input horizontally */
+    display: flex;
+    flex-direction: row; 
+    align-items: center; /* Vertically centers the items */
+    justify-content: center; /* 👈 Step 2: Center the children horizontally */    
+    gap: 20px; 
+    
+    text-align: left;
+    font-size: 3.2vw; 
+}
+
+/* Styling for all <input> elements */
+.form-div input[type="number"] {
+
+    display: flex; 
+    /* Set width to fill the container, but limit it */
+    width: 80%; 
+    max-width: 300px;
+    /* Uses EM or REM for vertical size (more readable than VW for height) */
+    height: 40px; 
+    padding: 5px 10px; /* Adjust padding inside the input box */
+    margin-top: 10px; /* Space between the label and the input box */
+    font-size: 1.2rem;
+    border: 2px solid #82f369;
+    border-radius: 5px;
+    background-color: #444;
+    color: azure;
+}
+
+.form-submit {
+    padding-top: 2vw;
+}
+
+.form-submit input[type="submit"] {
+    /* Styling the submit button itself */
+    background-color: #82f369;
+    color: #292626;
+    border: none;
+    padding: 10px 20px;
+    font-size: 2.5vw;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Add hover effect transition */
+}
+
+.form-submit input[type="submit"]:hover {
+    background-color: #6acd53; /* Darken on hover */
+}
+
+#displayMessage{
+    color: azure;
+    font-size: 3vw;
+    padding-top: 10px;
+}
