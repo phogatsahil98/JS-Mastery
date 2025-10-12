@@ -1,0 +1,101 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;    /* vertical centering */
+    justify-content: center; /* horizontal centering */
+    background-color: #212121;
+    color: #ffffff;
+    padding: 0 10%;
+}
+
+
+/* Clock Layout */
+#FlipFlop {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1vw; /* optional, ensures small even gap between squares */
+}
+
+/* Core Digit Box */
+.square {
+    position: relative;
+    font-size: 12vw;
+    font-weight: 1000;
+    border-radius: 1rem;
+    border: 2px solid #ff5d73;
+    background-color: #373737;
+    overflow: hidden;
+    text-align: center;
+    perspective: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+
+}
+
+.square {
+    width: 28vw;     
+    height: 18vw;    
+    font-size: 14vw; 
+    flex: unset;     /* remove flex so fixed width takes effect */
+}
+
+.square {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(8vw, 10vw, 14vw); /* min 8vw, preferred 10vw, max 14vw */
+}
+
+
+/* Flip Animation */
+.square span {
+    display: block;
+    transform-origin: top;
+    transition: transform 0.7s ease-in-out;
+}
+
+.square.flip span {
+    transform: rotateX(180deg);
+}
+
+/* Colon (:) */
+.span {
+    margin: 0 1vw;
+    font-size: 10vw;
+    font-weight: 1000;
+    color: #f4f4f4;
+}
+
+/* AM/PM Box */
+#AMPM {
+    min-width: 14vw;         /* minimum width for letters */
+    padding: 2vw;             /* extra space around text */
+    height: auto;             /* auto height to fit content */
+    font-size: 10vw;           /* smaller than squares but visible */
+    border-radius: 1rem;
+    color: #f4f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 1000;
+    aspect-ratio: 1 / 1;
+
+}
+
+
+#hour-2 , #minute-2{
+    margin: 1vw;  
+}
+
+.span {
+    margin: 0 0.5vw;
+}
