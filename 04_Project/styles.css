@@ -1,26 +1,30 @@
-.body{
-    background-color: darkslategray;
-    color: aliceblue;
-    padding: 0%;
-    margin: 2%;
+/* ---------- BODY STYLING ---------- */
+.body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: aliceblue;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
 }
 
+/* ---------- HEADER ANIMATION ---------- */
 h1 {
-  font-size: 8vw;
+  font-size: 6vw;
   background: linear-gradient(90deg, #82f369, #91cfff, #ffaacc);
-  background-size: 200%; /* allows smooth looping */
+  background-size: 200%;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  /* Animation */
-  animation: gradientMove 10s linear infinite;
-
+  animation: gradientMove 8s linear infinite;
   text-align: center;
+  margin-top: 2vh;
 }
 
-/* Define the animation */
 @keyframes gradientMove {
   0% {
     background-position: 0% 50%;
@@ -30,36 +34,92 @@ h1 {
   }
 }
 
-
-#input-box{
-    font-size: 4vw;
-    background-color: #49796B;
-    padding: 10vw;
-    margin :2vw;
+/* ---------- INPUT BOX CONTAINER ---------- */
+#input-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 2vw 6vw;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  width: 80%;
+  max-width: 500px;
 }
 
-#playAgain{
-    display: flex;
-    justify-content: center;
-    padding-top: 2vw;
-}
-#input-button{
-    margin: 2vw;
-    font-size: 6vw;
-    display: flex;
-    justify-content: center;
-}
-#button_1{
-    width: 16vw;
-    height: 6vw;
-    font-size: 3vw;
-    font-weight: 900;
-    border: none;
-    border-radius: 4px;
+/* ---------- INPUT FIELD ---------- */
+#input-field {
+  font-size: 1.5rem;
+  margin-bottom: 2vh;
+  color: #f3f3f3;
 }
 
-#output{
-    display: flex;
-    margin: 2vw;
-    justify-content: center;
+#numberField {
+  width: 60%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+/* ---------- BUTTON ---------- */
+#input-button {
+  margin: 2vh 0;
+  display: flex;
+  justify-content: center;
+}
+
+#button_1 {
+  width: 150px;
+  height: 45px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(90deg, #82f369, #91cfff);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+#button_1:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(146, 230, 255, 0.5);
+}
+
+/* ---------- OUTPUT BOX ---------- */
+#output-box {
+  margin-top: 3vh;
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+#Guessed, #GuessedRemaining, #output {
+  margin: 1vh 0;
+}
+
+/* ---------- PLAY AGAIN SECTION ---------- */
+#playAgain {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+}
+
+.replay-btn {
+  background: linear-gradient(90deg, #ffb347, #ffcc33);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.replay-btn:hover {
+  background: linear-gradient(90deg, #ffcc33, #ffb347);
+  transform: scale(1.05);
 }
