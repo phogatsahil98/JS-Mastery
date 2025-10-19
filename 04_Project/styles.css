@@ -1,0 +1,65 @@
+.body{
+    background-color: darkslategray;
+    color: aliceblue;
+    padding: 0%;
+    margin: 2%;
+}
+
+h1 {
+  font-size: 8vw;
+  background: linear-gradient(90deg, #82f369, #91cfff, #ffaacc);
+  background-size: 200%; /* allows smooth looping */
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animation */
+  animation: gradientMove 10s linear infinite;
+
+  text-align: center;
+}
+
+/* Define the animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+#input-box{
+    font-size: 4vw;
+    background-color: #49796B;
+    padding: 10vw;
+    margin :2vw;
+}
+
+#playAgain{
+    display: flex;
+    justify-content: center;
+    padding-top: 2vw;
+}
+#input-button{
+    margin: 2vw;
+    font-size: 6vw;
+    display: flex;
+    justify-content: center;
+}
+#button_1{
+    width: 16vw;
+    height: 6vw;
+    font-size: 3vw;
+    font-weight: 900;
+    border: none;
+    border-radius: 4px;
+}
+
+#output{
+    display: flex;
+    margin: 2vw;
+    justify-content: center;
+}
