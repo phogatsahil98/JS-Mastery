@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  font-size: 2rem;
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 200%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: gradientMove 8s linear infinite;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: #b0d8ff;
+  font-size: 0.95rem;
+}
+
+#display-box {
+  margin: 30px auto;
+  height: 120px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 255, 255, 0.1);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+  font-size: 2.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#display-box.active {
+  box-shadow: 0 0 40px #00ffff;
+  transform: scale(1.1);
+}
+
+.log-section {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+#key-log {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.key-item {
+  background: rgba(0, 255, 255, 0.15);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  color: #00ffff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.key-item:hover {
+  transform: scale(1.1);
+  background: rgba(0, 255, 255, 0.3);
+}
+
+#clear-btn {
+  margin-top: 25px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#clear-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00c6ff;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
